@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Courses</title>
+
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/mainPage.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/personalPage.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src = "scripts/coursesSetup.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/librarySetup.js"></script>
+
+</head>
+<body>
+
+<div id="libModal" class="personalModal">
+    <div class="personal-content">
+        <span class="close">&times;</span>
+        <h2>Список ваших курсов</h2>
+        <div id = "lib-courses-root"></div>
+    </div>
+</div>
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Подробнее о курсе</h1>
+        <div id = "courseDetails"> </div>
+    </div>
+</div>
+<div id="myModal_Authorization" class="modal">
+    <div class="auth-content">
+        <span class="close">&times;</span>
+        <h1>Авторизация</h1>
+
+        <form class="auth-form">
+
+            <input class="vertical" type="text" placeholder="ИМЯ">
+            <input class="vertical" type="email" placeholder="EMAIL">
+            <input class="vertical" type="tel" placeholder="+375(xx)xxxxxxx">
+            <a href="personal-page.html"><input type="button" value="ОТПРАВИТЬ"></a>
+        </form>
+
+    </div>
+</div>
+
+<header class = "header__container">
+    <div class="header__inner">
+        <div class = "header__wrapper">
+            <svg
+                    width="98"
+                    height="52"
+                    viewBox="0 0 52.916665 39.687499"
+                    version="1.1"
+                    id="svg1"
+                    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+                    sodipodi:docname="рисунок.svg"
+                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:svg="http://www.w3.org/2000/svg">
+                <sodipodi:namedview
+                        id="namedview1"
+                        pagecolor="#ffffff"
+                        bordercolor="#000000"
+                        borderopacity="0.25"
+                        inkscape:showpageshadow="2"
+                        inkscape:pageopacity="0.0"
+                        inkscape:pagecheckerboard="0"
+                        inkscape:deskcolor="#d1d1d1"
+                        inkscape:document-units="mm"
+                        inkscape:zoom="1.4142136"
+                        inkscape:cx="164.04877"
+                        inkscape:cy="73.892659"
+                        inkscape:window-width="1920"
+                        inkscape:window-height="1013"
+                        inkscape:window-x="-9"
+                        inkscape:window-y="-9"
+                        inkscape:window-maximized="1"
+                        inkscape:current-layer="layer1" />
+                <defs
+                        id="defs1">
+                    <rect
+                            x="266.23611"
+                            y="482.05627"
+                            width="97.355003"
+                            height="62.337002"
+                            id="rect2" />
+                </defs>
+                <g
+                        inkscape:label="Слой 1"
+                        inkscape:groupmode="layer"
+                        id="layer1">
+                    <rect
+                            style="fill:#4a4a72d1;fill-opacity:1;stroke-width:0.580615"
+                            id="rect1"
+                            width="36.833881"
+                            height="32.719151"
+                            x="2.1860006"
+                            y="3.1263616" />
+                    <text
+                            xml:space="preserve"
+                            transform="matrix(0.58853828,0,0,0.57279849,-153.91949,-264.03253)"
+                            id="text1"
+                            style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#ffffff;fill-opacity:1"><tspan
+         x="266.23633"
+         y="520.98276"
+         id="tspan1">JAM</tspan></text>
+                </g>
+            </svg>
+
+
+
+            <nav class = "header__items-container">
+                <ul>
+                    <li><a class = "header__item" href="#all-courses">Все курсы</a></li>
+                    <li><a class = "header__item" href = "#review">Отзывы</a></li>
+                    <li><a class = "header__item" href="#about-us">О нас</a></li>
+
+                </ul>
+            </nav>
+
+
+        </div>
+        <div class="breadcams"></div>
+    </div>
+</header>
+
+<a class="header__sign-button" id = "test" onclick="openLibrary()"><img src="assets/images/playlist.png" alt="library"></a>
+
+<section class = "about-section" id = "about-us">
+<h1>ПОЧЕМУ ИМЕННО МЫ?</h1>
+<p class="slogan">лучшая образовательная платформа</p>
+<div class = "about-us-numbers-container">
+    <img src="assets/images/imageMainPage.jpg" alt = "image courses">
+    <div class="info-block-container">
+        <div class="info-block">
+            <h2 class="info-block__num">98%</h2>
+            окончивших курс отмечают,
+            что достигли своих целей
+        </div>
+        <div  class="info-block">
+            <h2 class="info-block__num">24/7</h2>
+            учёба в собственном графике
+            из любой точки мира
+        </div>
+        <div  class="info-block">
+            <h2 class="info-block__num">100+</h2>
+            компаний работают с нами регулярно
+        </div>
+        <div  class="info-block">
+            <h2 class="info-block__num">1200+</h2>
+            выпускников смогли трудоустроиться
+        </div>
+        <div  class="info-block">
+            <h2 class="info-block__num">126</h2>
+           возраст самого старшего студента
+        </div>
+        <div  class="info-block">
+            <h2 class="info-block__num">1000+</h2>
+            студентов отчислились с вузов из-за нас
+        </div>
+
+    </div>
+
+</div>
+</section>
+<section class="all-courses-section" id = "all-courses">
+    <div class="content">
+        <h2 class="all-courses-container__headText">НАШИ САМЫЕ ПОПУЛЯРНЫЕ КУРСЫ</h2>
+
+        <div class = "all-courses-container">
+
+            <div class = "all-courses-container__list" id="courses">
+                <!----Курсы тут спавню --->
+
+            </div>
+        </div>
+        <button id = "showOther" class="hvr-sink" onclick="loadCourses()">Покажите ещё!</button>
+    </div>
+
+
+</section>
+<section class = "review-section" id = "review">
+    <br>
+    <h2>ЧТО ПРО НАС ГОВОРЯТ СТУДЕНТЫ?</h2>
+    <p class="highlight-rev">Мы стремимся создать дружественное и поддерживающее обучающее сообщество, где каждый найдет что-то полезное для себя!</p>
+    <div class="review-content">
+        <button class="carousel-button prev" onclick="scrollCarousel(-100)">&#10094;</button>
+        <div class="reviews-container" id="reviews">
+            <script src = "scripts/reviewsSetup.js"></script>
+
+        </div>
+        <button class="carousel-button next" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+    <h2>НАШ ПОТРЯСАЮЩИЙ ПРЕПОДОВАТЕЛЬСКИЙ СОСТАВ</h2>
+    <p class="highlight-rev">Настоящие профессионалы своего дела, которые не только обладают высоким уровнем знаний и опыта, но и способны вдохновить и поддержать каждого студента на пути к успеху.</p>
+    <div class = "teachers-container">
+        <div class="teacher-info-block">
+            <img class = "teacher-image" src="assets/images/zhilyak.jpg" alt="teacher">
+            <h3 class = "teacher-name" >Жиляк Надежда Александровна </h3>
+            <p class="teacher-description">Доцент, кандидат технических наук</p>
+        </div>
+        <div class="teacher-info-block">
+            <img class = "teacher-image" src="assets/images/linus.png" alt="teacher">
+            <h3 class = "teacher-name" >Торвальдс Линус Бенедиктович</h3>
+            <p class="teacher-description">Ассистент</p>
+        </div>
+        <div class="teacher-info-block">
+            <img class = "teacher-image" src="assets/images/Anders_Hejlsberg.jpg" alt="teacher">
+            <h3 class = "teacher-name" >Хейлсберг Андерс Сишарпович</h3>
+            <p class="teacher-description">Инженер-программист</p>
+        </div>
+        <div class="teacher-info-block">
+            <img class = "teacher-image" src="assets/images/gvido.jpg" alt="teacher">
+            <h3 class = "teacher-name" >Гвидо ван Россумович </h3>
+            <p class="teacher-description">Автор языка программирования Python.</p>
+        </div>
+    </div>
+</section>
+
+    <footer>
+    <div class="breadcams"></div>
+    <br>
+    <form class="content__container__form">
+        <h1 >Нужна помощь?</h1>
+        <p>Если вы хотите больше узнать или не знаете, какую программу обучения выбрать, оставьте заявку — и мы перезвоним</p>
+
+        <input type="text" placeholder="ИМЯ">
+        <input type="email" placeholder="EMAIL">
+        <input type="tel" placeholder="+375(xx)xxxxxxx">
+        <input type="submit" value="ОТПРАВИТЬ">
+    </form>
+    <div class="contact-information">
+     <p style="width: 50%">ООО «JAM», УНП 193253177
+         222012, Республика Беларусь, г. Минск, ул. Бобруйская 25, пом.314
+         Свидетельство о государственной регистрации №193454177 от 06.08.2020 выдано Минским горисполкомом</p>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

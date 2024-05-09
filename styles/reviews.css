@@ -1,0 +1,25 @@
+.review-item{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: #2b2b34;
+    border-radius: 15px;
+    width: 250px;
+    height: 141px;
+    padding: 15px;
+    transition: .2s linear;
+}
+.review-item:hover{
+    box-shadow: 0 0 0 2px #2b2b34, 0 0 0 4px #2b2b34;
+}
+.reviews-container{
+    min-width: 1160px ;
+    margin: auto;
+    display: inline-flex;
+}
+
+@media  screen and (max-width: 768px)
+{
+    .reviews-container{
+        margin: 40px;
+        grid-template-columns: repeat(1, 0.2fr);
+    }
+}

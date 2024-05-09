@@ -1,0 +1,126 @@
+
+
+.all-courses-container{
+    display: flex;
+    justify-content: center;
+
+}
+.all-courses-container__list{
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 0.2fr);
+
+}
+.all-courses-container__item{
+    animation-name: slideInUp;
+
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: #2b2b34;
+
+    width: 320px;
+    height: 360px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 25px;
+
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .17s linear;
+}
+.all-courses-container__item:hover{
+    box-shadow: 0 0 0 2px #3c3c48, 0 0 0 4px #3c3c48;
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    80%{
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.all-courses-container__headText{
+    margin-top: 2vh;
+    color: white;
+    font-family:Graphik, Tahoma, sans-serif;
+}
+.content{
+    text-align: center;
+}
+.course-name{
+    color: azure;
+    text-align: start;
+    font-size: 1.2em;
+    font-family: "Arial Black", serif
+}
+.course-description{
+    color: #8d8d93;
+    text-align: left;
+    font-family: Graphik, Tahoma, sans-serif;
+}
+.course-image{
+    width: 96px;
+    height: 64px;
+    object-fit: cover;
+    float: right;
+    border-radius: 20px;
+}
+
+@media  screen and (max-width: 768px)
+{
+    .all-courses-container__list{
+        grid-template-columns: repeat(1, 0.2fr);
+    }
+}
+.course-controller-container{
+    margin: auto;
+    grid-template-columns: repeat(2, 2fr);
+    display: grid;
+    grid-gap: 20px;
+    align-self: flex-end;
+
+}
+.course-price-container{
+    background-color: #4d4d5d;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    min-height: 70px;
+
+    font-family: "Arial Black", serif;
+    color: #bebebe;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    font-size: 2em;
+
+}
+.course-1{
+    min-height: 112px;
+    padding: 2px
+}
+.course-old-price-text{
+    align-self: center;
+    text-decoration: line-through;
+}
+.course-new-price-text{
+    align-self: center;
+}
+
+
+.price-byn{
+    font-size: 50%;
+}
+

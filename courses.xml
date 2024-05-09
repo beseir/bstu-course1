@@ -9,49 +9,49 @@
         <name>Data Science</name>
         <description>Исследуйте мир науки о данных с этим фундаментальным курсом</description>
         <price>23</price>
-        <image>../assets/images/2.webp</image>
+        <image>./assets/images/2.webp</image>
     </course>
     <course>
         <name>Интенсивный веб-разработчик</name>
         <description>Овладейте навыками веб-разработки в этом интенсивном буткемпе</description>
         <price>20</price>
-        <image>../assets/images/4.webp</image>
+        <image>./assets/images/4.webp</image>
     </course>
     <course>
         <name>Цифровой маркетинг</name>
         <description>Откройте ключевые стратегии цифрового маркетинга в этом курсе</description>
         <price>31</price>
-        <image>../assets/images/5.webp</image>
+        <image>./assets/images/5.webp</image>
     </course>
     <course>
         <name>Графический дизайн</name>
         <description>Начните изучать графический дизайн в этом курсе для начинающих</description>
         <price>15</price>
-        <image>../assets/images/7.webp</image>
+        <image>./assets/images/7.webp</image>
     </course>
     <course>
         <name>Мастер-класс по фотографии</name>
         <description>Изучите техники фотографии от экспертов в этом комплексном курсе</description>
         <price>25</price>
-        <image>../assets/images/8.webp</image>
+        <image>./assets/images/8.webp</image>
     </course>
     <course>
         <name>Разработка мобильных приложений</name>
         <description>Создайте свои собственные мобильные приложения в этом практическом курсе</description>
         <price>17</price>
-        <image>../assets/images/10.webp</image>
+        <image>./assets/images/10.webp</image>
     </course>
     <course>
         <name>Маркетинг</name>
         <description>Научитесь создавать эффективные кампании в социальных сетях в этом курсе</description>
         <price>23</price>
-        <image>../assets/images/6.webp</image>
+        <image>./assets/images/6.webp</image>
     </course>
     <course>
         <name>Основы машинного обучения</name>
         <description>Погрузитесь в мир машинного обучения с этим фундаментальным курсом</description>
         <price>18</price>
-        <image>../assets/images/12.webp</image>
+        <image>./assets/images/12.webp</image>
     </course>
     <course>
         <name>Видеомонтаж</name>
@@ -63,12 +63,12 @@
         <name>Принципы UI/UX</name>
         <description>Откройте принципы дизайна пользовательского интерфейса и опыта пользователя в этом курсе</description>
         <price>10</price>
-        <image>../assets/images/9.webp</image>
+        <image>./assets/images/9.webp</image>
     </course>
     <course>
         <name>Основы кибербезопасности</name>
         <description>Научитесь защищать цифровые активы с помощью этого курса по кибербезопасности</description>
         <price>32</price>
-        <image>../assets/images/11.webp</image>
+        <image>./assets/images/11.webp</image>
     </course>
 </courses>

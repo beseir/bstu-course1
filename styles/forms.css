@@ -72,3 +72,6 @@ input[type="text"]{
     flex-direction: column;
     width: 100%;
 }
+#cardNumber, #cardName, #cardLink {
+    width: 90%;
+}

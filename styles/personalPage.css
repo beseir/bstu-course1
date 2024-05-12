@@ -1,10 +1,13 @@
 .courseElement{
     background-color: #2b2b34;
+
     border-radius: 15px;
     width: 150px;
-    height: 100px;
+    height: 120px;
     padding: 10px;
     margin: 10px;
+    position: relative;
+    overflow: hidden;
 
 }
 .courseElement > img{
@@ -31,11 +34,83 @@
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 65%;
-    height: 70%;
+
+    height: 75%;
     border-radius: 15px;
 }
 #lib-courses-root{
     display: grid;
-    grid-template-columns: repeat(5, 0.1fr);
+
+}
+
+.payForCoursesButton{
+    width: 150px;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: background-color 0.2s;
+    font-size: .9em;
+}
+.payForCoursesButton:hover{
+    background-color: #c4c4c4;
+}
+
+.courseElement:hover .overlay {
+    opacity: 1;
+}
+#lib-courses-root{
+    overflow: hidden;
+    overflow-scrolling: touch;
+
+}
+#lib-courses-root::-webkit-scrollbar {
+    width: 0;
+}
+
+.overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-icon {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: Graphik, Tahoma, sans-serif;
+    display: none; /* Изначально скрыт */
+}
+
+.courseElement:hover .download-icon {
+    display: block;
+}
+@media screen and (min-width: 768px) {
+    #lib-courses-root{
+        grid-template-columns: repeat(4, 0.1fr);
+    }
+    .personal-content{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #lib-courses-root{
+        grid-template-columns: repeat(2, 0.1fr);
+        overflow: scroll;
+        height: 100%;
+    }
+    .personal-content{
+        width: 90%;
+        height: 100%;
+    }
+
 }

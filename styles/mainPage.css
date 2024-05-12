@@ -19,6 +19,9 @@
         width: 124px;
         height: 124px;
     }
+    .contact-information{
+        width: 100%;
+    }
 }
 @media  screen and (min-width: 768px)
 {
@@ -211,6 +214,7 @@ text-align: center;
     margin-top: 20px;
     width: 100%;
     background-color: #4d4d5d;
+    text-align: center;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 }
 .about-section{

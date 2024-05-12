@@ -41,6 +41,7 @@ function buyCourse(e) {
 
     const courseData = e.target.data;
     courseData.time = new Date().toLocaleDateString();
+    courseData.isPaid = false;
 
     const boughtCourses = JSON.parse(localStorage.getItem('boughtCourses')) || [];
 
@@ -54,8 +55,22 @@ function buyCourse(e) {
         localStorage.setItem('boughtCourses', JSON.stringify(boughtCourses));
         document.dispatchEvent(eventBought);
     } else {
-        alert('Этот курс уже есть в вашем списке купленных курсов.');
+        showWarningsModal();
     }
+}
+
+function showWarningsModal() {
+    const warnModal = document.querySelector('.warnCourseModal'); // Используйте . для класса
+    const warnContent = document.querySelector('.warn-content');
+
+    setTimeout(() => {
+        warnModal.style.opacity = '1';
+        warnContent.style.transform = 'translateX(-50%) translateY(100%)';
+        setTimeout(() => {
+            warnModal.style.opacity = '0';
+            warnContent.style.transform = 'translateX(-50%) translateY(0)'; // Используйте translateY для вертикального перемещения
+        }, 2000);
+    }, 100);
 }
 
 

@@ -18,7 +18,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 30%;
-    height: 70%;
+    height: auto;
     border-radius: 15px;
 }
 .close {
@@ -41,4 +41,56 @@
     .modal-content, .auth-content{
         width: 90%;
     }
+}
+
+.notify-content{
+    bottom: 0;
+    left: 50%;
+    z-index: 10000;
+    transform: translateX(-50%);
+    position: fixed;
+    width: 30%;
+    height: 6vh;
+    background-color: #4CAF50;
+    text-align: center;
+    align-content: center;
+    font-size: large;
+
+    border-radius: 15px;
+}
+.warn-content{
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: fixed;
+    width: 30%;
+    height: 6vh;
+    background-color: #b04646;
+    text-align: center;
+    align-content: center;
+    font-size: large;
+    border: #2b2b34 2px solid;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.warnCourseModal{
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.sucModal{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#warningModal{
+    color: red;
+}
+@media screen and (max-width: 768px) {
+    .notify-content{
+        width: 100%;
+    }
+
 }

@@ -21,18 +21,33 @@
     <script src = "scripts/coursesSetup.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/librarySetup.js"></script>
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/burgerHeader.js"></script>
 
 </head>
 <body>
 
+
 <div id="libModal" class="personalModal">
     <div class="personal-content">
-        <span class="close">&times;</span>
+        <span class="close" >&times;</span>
         <h2>Список ваших курсов</h2>
+
+        <button onclick="pay()" class="payForCoursesButton">Оплатить 00 руб</button>
+        <button id="cardLinkBtn" class="payForCoursesButton" onclick="openCard()"> Привязать карту</button>
+
+        <label>
+            <select class="payForCoursesButton" onchange="displayFiltredCourses(this)">
+                <option>Все</option>
+                <option>Оплаченные</option>
+                <option>Не оплаченные</option>
+            </select>
+        </label>
+        <button class="payForCoursesButton" onclick="clearAll()" style="width: 90px; margin: 5px"> Очистить</button>
+
         <div id = "lib-courses-root"></div>
     </div>
 </div>
-
 
 <div id="myModal" class="modal">
     <div class="modal-content">
@@ -41,21 +56,32 @@
         <div id = "courseDetails"> </div>
     </div>
 </div>
-<div id="myModal_Authorization" class="modal">
-    <div class="auth-content">
-        <span class="close">&times;</span>
-        <h1>Авторизация</h1>
 
-        <form class="auth-form">
+<div id="cardModal" class="modal">
 
-            <input class="vertical" type="text" placeholder="ИМЯ">
-            <input class="vertical" type="email" placeholder="EMAIL">
-            <input class="vertical" type="tel" placeholder="+375(xx)xxxxxxx">
-            <a href="personal-page.html"><input type="button" value="ОТПРАВИТЬ"></a>
+
+    <div class="modal-content">
+        <span class="close" id = "closeCard">&times;</span>
+        <form id="cardForm">
+            <label for="cardNumber">Номер карты:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" required>
+
+            <br><br>
+            <label for="cardName">Имя на карте:</label>
+            <input type="text" id="cardName" name="cardName" required>
+            <br><br>
+            <input id="cardLink" type="submit" value="Привязать карту">
         </form>
+    </div>
 
+</div>
+
+<div id="successModal" class="sucModal">
+    <div class="notify-content">
+     <p class="notifyText">Спасибо! Мы с вами обязательно свяжемся!</p>
     </div>
 </div>
+
 
 <header class = "header__container">
     <div class="header__inner">
@@ -123,6 +149,13 @@
             </svg>
 
 
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+
 
             <nav class = "header__items-container">
                 <ul>
@@ -136,6 +169,16 @@
 
         </div>
         <div class="breadcams"></div>
+        <nav class = "mobileNav">
+            <ul>
+                <li><a class = "header__item-mobile" href="#all-courses">Все курсы</a></li>
+                <div class="breadcams"></div>
+                <li><a class = "header__item-mobile" href = "#review">Отзывы</a></li>
+                <div class="breadcams"></div>
+                <li><a class = "header__item-mobile" href="#about-us">О нас</a></li>
+                <div class="breadcams"></div>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -207,7 +250,10 @@
         <button class="carousel-button next" onclick="scrollCarousel(1)">&#10095;</button>
     </div>
     <h2>НАШ ПОТРЯСАЮЩИЙ ПРЕПОДОВАТЕЛЬСКИЙ СОСТАВ</h2>
-    <p class="highlight-rev">Настоящие профессионалы своего дела, которые не только обладают высоким уровнем знаний и опыта, но и способны вдохновить и поддержать каждого студента на пути к успеху.</p>
+    <div style="width: 100%; text-align: center; display: flex; justify-content: center">
+        <div style="width: 70%" class="highlight-rev">Настоящие профессионалы своего дела, которые не только обладают высоким уровнем знаний и опыта, но и способны вдохновить и поддержать каждого студента на пути к успеху.</div>
+    </div>
+
     <div class = "teachers-container">
         <div class="teacher-info-block">
             <img class = "teacher-image" src="assets/images/zhilyak.jpg" alt="teacher">
@@ -239,10 +285,11 @@
         <h1 >Нужна помощь?</h1>
         <p>Если вы хотите больше узнать или не знаете, какую программу обучения выбрать, оставьте заявку — и мы перезвоним</p>
 
-        <input type="text" placeholder="ИМЯ">
-        <input type="email" placeholder="EMAIL">
-        <input type="tel" placeholder="+375(xx)xxxxxxx">
-        <input type="submit" value="ОТПРАВИТЬ">
+        <input id="nameInp" type="text" placeholder="ИМЯ">
+        <input id="emailInp" type="email" placeholder="EMAIL">
+        <input id="telInp" type="tel" placeholder="+375(xx)xxxxxxx">
+        <input type="submit" value="ОТПРАВИТЬ" >
+        <p id="warningModal" aria-live="polite"></p>
     </form>
     <div class="contact-information">
      <p style="width: 50%">ООО «JAM», УНП 193253177
@@ -251,7 +298,11 @@
     </div>
 </footer>
 
-
+<div id="warnCourseModal" class="warnCourseModal">
+    <div class="warn-content">
+        <p class="notifyText">Этот курс уже есть в вашем списке курсов!</p>
+    </div>
+</div>
 </body>
 
 </html>

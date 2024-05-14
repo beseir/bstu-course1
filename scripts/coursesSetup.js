@@ -72,8 +72,6 @@ function showWarningsModal() {
         }, 2000);
     }, 100);
 }
-
-
 function loadCourses(){
     indexAccum = courseIndex + 3;
     if(indexAccum >= allCourses.length){

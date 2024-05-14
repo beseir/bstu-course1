@@ -1,18 +1,18 @@
-
 .button {
   padding: 16px 42px;
   border-radius: 3px;
-  box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
   line-height: 1.25;
   background: #3b3b3b;
   text-decoration: none;
   color: white;
   font-size: 16px;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   position: relative;
-  transition: background-color .6s ease;
+  transition: background-color 0.6s ease;
   overflow: hidden;
+
   &:after {
     content: "";
     position: absolute;
@@ -23,19 +23,56 @@
     top: var(--mouse-y);
     left: var(--mouse-x);
     transform-style: flat;
-    transform: translate3d(-50%,-50%,0);
-    background: rgba(white,.1);
+    transform: translate3d(-50%, -50%, 0);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 100%;
-    transition: width .3s ease, height .3s ease;
+    transition: width 0.3s ease, height 0.3s ease;
   }
-  &:focus,
+
+  &:focus, &:hover {
+    background: #242424;
+  }
+
+  &:active:after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.hvr-sink {
+  background-color: #4d4d5d;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  transition: .2s linear;
+
   &:hover {
-    background: darken(#363636,7%);
+    box-shadow: 0 0 0 1px #4d4d5d, 0 0 0 2px #4d4d5d;
   }
-  &:active {
-    &:after {
-      width: 300px;
-      height: 300px;
-    }
+}
+
+.buyCourseBtn, .moreBtn {
+  border: none;
+  padding: 12px;
+  font-family: Graphik, Tahoma, sans-serif;
+  color: #bebebe;
+  background-color: #4d4d5d;
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: rgba(74, 74, 114, 0.82);
   }
+}
+
+a > input[type="button"], input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  border-radius: 2vmin;
 }

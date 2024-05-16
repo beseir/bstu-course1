@@ -123,4 +123,23 @@
 .price-byn{
     font-size: 50%;
 }
+.iteractableImg{
+    background: url("../assets/images/imageMainPage.jpg") no-repeat center center;
+    width: 415px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin: auto;
+    background-size: 100% 100%;
+    transition:background-size 0.5s ease ;
 
+}
+.iteractableImg:hover{
+    background-size: 105% 105%;
+}
+.why{
+    transition: filter .5s;
+}
+.why:hover{
+    filter: drop-shadow(5px 5px 15px rgba(136, 136, 136, 0.83));
+}

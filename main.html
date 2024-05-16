@@ -23,10 +23,8 @@
     <script src="scripts/librarySetup.js"></script>
     <script src="scripts/validation.js"></script>
     <script src="scripts/burgerHeader.js"></script>
-
 </head>
 <body>
-
 
 <div id="libModal" class="personalModal">
     <div class="personal-content">
@@ -58,8 +56,6 @@
 </div>
 
 <div id="cardModal" class="modal">
-
-
     <div class="modal-content">
         <span class="close" id = "closeCard">&times;</span>
         <form id="cardForm">
@@ -73,7 +69,6 @@
             <input id="cardLink" type="submit" value="Привязать карту">
         </form>
     </div>
-
 </div>
 
 <div id="successModal" class="sucModal">
@@ -81,7 +76,6 @@
      <p class="notifyText">Спасибо! Мы с вами обязательно свяжемся!</p>
     </div>
 </div>
-
 
 <header class = "header__container">
     <div class="header__inner">
@@ -148,14 +142,11 @@
                 </g>
             </svg>
 
-
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-
-
 
             <nav class = "header__items-container">
                 <ul>
@@ -165,7 +156,6 @@
 
                 </ul>
             </nav>
-
 
         </div>
         <div class="breadcams"></div>
@@ -185,10 +175,11 @@
 <a class="header__sign-button" id = "test" onclick="openLibrary()"><img src="assets/images/playlist.png" alt="library"></a>
 
 <section class = "about-section" id = "about-us">
-<h1>ПОЧЕМУ ИМЕННО МЫ?</h1>
+<h1 class = "why">ПОЧЕМУ ИМЕННО МЫ?</h1>
 <p class="slogan">лучшая образовательная платформа</p>
 <div class = "about-us-numbers-container">
-    <img src="assets/images/imageMainPage.jpg" alt = "image courses">
+
+    <div class = "iteractableImg" alt = "image courses"></div>
     <div class="info-block-container">
         <div class="info-block">
             <h2 class="info-block__num">98%</h2>
@@ -218,9 +209,9 @@
         </div>
 
     </div>
-
 </div>
 </section>
+
 <section class="all-courses-section" id = "all-courses">
     <div class="content">
         <h2 class="all-courses-container__headText">НАШИ САМЫЕ ПОПУЛЯРНЫЕ КУРСЫ</h2>

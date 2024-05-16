@@ -74,9 +74,8 @@ document.addEventListener('coursesLoaded', (event) => {
         libModal.style.display = "none";
     }
     window.onclick = function(event) {
-        if (event.target === detailsModal || event.target === libModal || event.target === authModal) {
+        if (event.target === detailsModal || event.target === libModal) {
             detailsModal.style.display = "none";
-            authModal.style.display = "none";
             libModal.style.display = "none";
         }
     }

@@ -10,14 +10,13 @@
     overflow: hidden;
 
 }
-.courseElement > img{
+.courseElement > img {
     width: 64px;
     height: 48px;
     object-fit: cover;
     border-radius: 15px;
 }
 .personalModal{
-  ;
     display: none;
     position: fixed;
     z-index: 1000000;
@@ -97,20 +96,53 @@
 @media screen and (min-width: 768px) {
     #lib-courses-root{
         grid-template-columns: repeat(4, 0.1fr);
+
     }
     .personal-content{
         width: 50%;
+
+    }
+}
+@media screen and (max-width: 1280px) {
+    .personal-content{
+        width: 60%;
+        overflow: scroll;
+    }
+    #lib-courses-root{
+        grid-template-columns: repeat(4, 0.1fr);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .personal-content{
+        width: 75%;
+        overflow: scroll;
+    }
+    #lib-courses-root{
+        grid-template-columns: repeat(4, 0.1fr);
+    }
+    .warn-content{
+        width: 90%;
     }
 }
 @media screen and (max-width: 768px) {
-    #lib-courses-root{
-        grid-template-columns: repeat(2, 0.1fr);
+    .personal-content{
         overflow: scroll;
+    }
+    #lib-courses-root{
+        grid-template-columns: repeat(2, 0.01fr);
+
+        scroll-behavior: smooth;
+        scroll-padding: 100px;
         height: 100%;
+        padding-bottom: 140px;
     }
     .personal-content{
         width: 90%;
         height: 100%;
+    }
+    .courseElement{
+        width: 130px;
+        height: 100px;
     }
 
 }

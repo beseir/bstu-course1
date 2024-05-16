@@ -77,8 +77,9 @@ border: 3px solid #3e3e4b;
         display: block;
     }
     .mobileNav{
-        display: block;
+        display: none;
     }
+
 }
 @media screen and (min-width: 768px){
 

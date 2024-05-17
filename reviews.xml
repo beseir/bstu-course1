@@ -2,41 +2,41 @@
     <review>
         <name>Белодед Николай</name>
         <text>Отличные курсы, много полезной информации. Рекомендую!</text>
-        <img>../assets/images/beloded.jpg</img>
+        <img>./assets/images/beloded.jpg</img>
     </review>
     <review>
         <name>Бандана Иван</name>
         <text>Очень понравилось обучение, все доступно и понятно. Спасибо!</text>
-        <img>../assets/images/van.jpg</img>
+        <img>./assets/images/van.jpg</img>
     </review>
     <review>
         <name>Уласевич Николай</name>
         <text>Курсы помогли мне разобраться в сложных темах. Большое спасибо!</text>
-        <img>../assets/images/Уласевич.jpg</img>
+        <img>./assets/images/Уласевич.jpg</img>
     </review>
     <review>
         <name>Том Йорк</name>
         <text>Отличные курсы, помогли мне развить свои навыки. Спасибо!</text>
-        <img>../assets/images/tom.jpg</img>
+        <img>./assets/images/tom.jpg</img>
     </review>
     <review>
         <name>Балцевич Павел</name>
         <text>Интересные задания и понятные объяснения. Рекомендую начинающим!</text>
-        <img>../assets/images/paul.jpg</img>
+        <img>./assets/images/paul.jpg</img>
     </review>
     <review>
         <name>Барковский Евгений</name>
-        <text>Курсы помогли мне справиться с трудными задачами. Очень довольна результатом!</text>
-        <img>../assets/images/barkovsky.png</img>
+        <text>Курсы помогли мне справиться с трудными задачами. Очень доволен результатом!</text>
+        <img>./assets/images/barkovsky.png</img>
     </review>
     <review>
         <name>Иванов Савелий</name>
         <text>Отличный формат обучения, удобно и эффективно. Рекомендую!</text>
-        <img>../assets/images/gay.jpg</img>
+        <img>./assets/images/gay.jpg</img>
     </review>
     <review>
         <name>Кабачкович Евгений</name>
         <text>Верните деньги!</text>
-        <img>../assets/images/zhenok.jpg</img>
+        <img>./assets/images/zhenok.jpg</img>
     </review>
 </reviews>
